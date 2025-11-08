@@ -1,29 +1,39 @@
 {
   "name": "@vitamax/async",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Ruijun Gao <rckgao@gmail.com>",
   "description": "A utility library about asynchronous programming in JavaScript",
   "license": "MIT",
-  "keywords": [
-    "semaphore",
-    "async",
-    "concurrency",
-    "utility"
-  ],
+  "keywords": [],
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/async.umd.cjs",
+  "module": "dist/async.js",
+  "types": "dist/async.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/async.js",
+      "require": "./dist/async.umd.cjs"
+    }
+  },
   "files": [
     "dist",
     "src",
     "README.md"
   ],
+  "engines": {
+    "node": "24",
+    "pnpm": "10"
+  },
+  "packageManager": "pnpm@10.20.0+sha512.cf9998222162dd85864d0a8102e7892e7ba4ceadebbf5a31f9c2fce48dfce317a9c53b9f6464d1ef9042cba2e02ae02a9f7c143a2b438cd93c91840f0192b9dd",
   "scripts": {
-    "build": "tsc"
+    "build": "vite build"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.54.0",
     "@tsconfig/strictest": "^2.0.5",
-    "typescript": "^5.8.3"
-  },
-  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf"
+    "@types/node": "^24.10.0",
+    "typescript": "^5.8.3",
+    "unplugin-dts": "1.0.0-beta.6",
+    "vite": "^7.2.2"
+  }
 }

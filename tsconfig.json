@@ -3,13 +3,18 @@
   "compilerOptions": {
     "target": "es6",
     "module": "esnext",
-    "rootDir": "./src",
+    "moduleResolution": "bundler",
 
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "./dist",
-
-    "forceConsistentCasingInFileNames": true
-  }
+    "forceConsistentCasingInFileNames": true,
+    "composite": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "tsconfig.node.json"
+    },
+    {
+      "path": "tsconfig.lib.json"
+    }
+  ]
 }
