@@ -5,13 +5,13 @@ import { defineConfig } from "vite";
 export default defineConfig({
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.ts"),
+      entry: path.resolve(import.meta.dirname, "src/index.ts"),
       name: "vitamax.async",
     },
   },
   plugins: [
     dts({
-      tsconfigPath: path.resolve(__dirname, "tsconfig.lib.json"),
+      tsconfigPath: path.resolve(import.meta.dirname, "tsconfig.lib.json"),
       bundleTypes: true,
     }),
   ],
